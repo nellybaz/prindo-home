@@ -1,0 +1,1297 @@
+/*
+@File: Ozen Template Global Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+** - Default CSS
+** - Default btn CSS
+** - Section Title CSS
+** - Main Banner Shape
+** - Partner Area CSS
+** - Features Area CSS
+** - Experiences Area CSS
+** - Services Area CSS
+** - Support Area CSS
+** - Cases Area CSS
+** - Clients Area CSS
+** - Plans Area CSS
+** - Overview Area CSS
+** - About Area CSS
+** - Fun Facts Area CSS
+** - Projects Area CSS
+** - Analysis Area CSS 
+** - Technology Area CSS 
+** - Page Banner Area CSS 
+** - FAQ Area CSS 
+** - Services Details Area CSS
+** - Pagination CSS
+** - Footer Area CSS
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --main-font-family: 'Inter', sans-serif;
+  --main-color: #0064FB;
+  --optional-color: #FF414B;
+  --main-gradient-color: linear-gradient(90deg, rgba(255, 65, 76, 0.96) 0%, #FF8760 100%);
+  --white-color: #ffffff;
+  --black-color: #2E2F46;
+  --paragraph-color: #494A60;
+  --font-size: 16px;
+  --transition: .6s;
+  scroll-behavior: initial;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font-family);
+  font-size: var(--font-size);
+  color: var(--paragraph-color);
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--black-color);
+  display: inline-block;
+}
+
+a:hover, a:focus {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+button {
+  outline: 0 !important;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: var(--paragraph-color);
+  font-weight: 400;
+  font-size: var(--font-size);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+i {
+  line-height: normal;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+.p-relative {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.pr-15 {
+  padding-right: 15px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--black-color);
+  font-family: var(--main-font-family);
+  font-weight: 600;
+}
+
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+.form-select {
+  height: 45px;
+  font-size: 14px;
+}
+
+.default-btn {
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 5px;
+  padding: 15px 50px 15px 25px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: -5px;
+}
+
+.default-btn span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--optional-color);
+  -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.default-btn i {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 15px;
+}
+
+.default-btn:hover {
+  color: var(--white-color);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.default-btn:hover span {
+  width: 225%;
+  height: 562.5px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  max-width: 750px;
+  margin: auto;
+}
+
+.main-banner-shape-1 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.main-banner-shape-2 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.main-banner-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.main-banner-shape-4 {
+  -webkit-animation: animationFramesOne 10s infinite linear;
+          animation: animationFramesOne 10s infinite linear;
+}
+
+.main-banner-shape-5 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.main-banner-shape-6 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.main-banner-shape-7 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.main-banner-shape-8 {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+@-webkit-keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animationFramesOne {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(73px, -1px) rotate(36deg);
+            transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    -webkit-transform: translate(141px, 72px) rotate(72deg);
+            transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    -webkit-transform: translate(83px, 122px) rotate(108deg);
+            transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    -webkit-transform: translate(-40px, 72px) rotate(144deg);
+            transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes animationFramesOne {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(73px, -1px) rotate(36deg);
+            transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    -webkit-transform: translate(141px, 72px) rotate(72deg);
+            transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    -webkit-transform: translate(83px, 122px) rotate(108deg);
+            transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    -webkit-transform: translate(-40px, 72px) rotate(144deg);
+            transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes moveleftbounce {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveleftbounce {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.partner-slides.owl-theme .owl-nav {
+  margin-top: 0;
+}
+
+.partner-slides.owl-theme .owl-nav [class*=owl-] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  outline: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 43px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--white-color);
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  color: var(--black-color);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+}
+
+.partner-slides.owl-theme .owl-nav [class*=owl-]:hover, .partner-slides.owl-theme .owl-nav [class*=owl-]:focus {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.partner-slides.owl-theme .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: 0;
+}
+
+.partner-slides.owl-theme .owl-nav [class*=owl-] i {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.partner-slides.owl-theme:hover .owl-nav [class*=owl-] {
+  opacity: 1;
+  visibility: visible;
+  left: -20px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.partner-slides.owl-theme:hover .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: -20px;
+}
+
+.single-features img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-features:hover img {
+  -webkit-animation: bounceIn 1s;
+          animation: bounceIn 1s;
+}
+
+.single-features-box:hover::before {
+  height: 100%;
+}
+
+.single-features-box:hover img {
+  -webkit-animation: bounceIn 1s;
+          animation: bounceIn 1s;
+}
+
+.features-shape-1 {
+  -webkit-animation: rotateme 8s infinite linear;
+          animation: rotateme 8s infinite linear;
+}
+
+.features-shape-2 {
+  -webkit-animation: rotateme 8s infinite linear;
+          animation: rotateme 8s infinite linear;
+}
+
+.features-shape-3 {
+  -webkit-animation: animationFramesOne 8s infinite linear;
+          animation: animationFramesOne 8s infinite linear;
+}
+
+.features-shape-4 {
+  -webkit-animation: animationFramesOne 20s infinite linear;
+          animation: animationFramesOne 20s infinite linear;
+}
+
+.experiences-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.experiences-shape-3 {
+  -webkit-animation: animationFramesOne 10s infinite linear;
+          animation: animationFramesOne 10s infinite linear;
+}
+
+.experiences-shape-4 {
+  -webkit-animation: animationFramesOne 20s infinite linear;
+          animation: animationFramesOne 20s infinite linear;
+}
+
+.experiences-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.single-services:hover .icon i {
+  -webkit-animation: jackInTheBox 0.5s;
+          animation: jackInTheBox 0.5s;
+}
+
+.single-services.with-box-shadow:hover .icon i {
+  -webkit-animation: jackInTheBox 0.5s;
+          animation: jackInTheBox 0.5s;
+}
+
+.single-services-item:hover .icon i {
+  -webkit-animation: jackInTheBox 0.5s;
+          animation: jackInTheBox 0.5s;
+}
+
+.single-services-box:hover .icon i {
+  -webkit-animation: jackInTheBox 0.5s;
+          animation: jackInTheBox 0.5s;
+}
+
+.services-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.services-shape-2 {
+  -webkit-animation: animationFramesOne 10s infinite linear;
+          animation: animationFramesOne 10s infinite linear;
+}
+
+.support-shape-3 {
+  -webkit-animation: animationFramesOne 10s infinite linear;
+          animation: animationFramesOne 10s infinite linear;
+}
+
+.support-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.cases-shape-4 {
+  -webkit-animation: animationFramesOne 10s infinite linear;
+          animation: animationFramesOne 10s infinite linear;
+}
+
+.cases-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.cases-shape-6 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.cases-shape-7 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.clients-area.bg-white-color .clients-slides.owl-theme .owl-dots .owl-dot span {
+  background-color: #E5F0FF;
+}
+
+.clients-area.bg-white-color .clients-slides.owl-theme .owl-dots .owl-dot:hover span, .clients-area.bg-white-color .clients-slides.owl-theme .owl-dots .owl-dot.active span {
+  background-color: var(--main-color);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.clients-item .shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.clients-item .shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.clients-item .shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.clients-slides.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  background-color: var(--white-color);
+  -webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50%;
+}
+
+.clients-slides.owl-theme .owl-dots .owl-dot:hover span, .clients-slides.owl-theme .owl-dots .owl-dot.active span {
+  background-color: var(--main-color);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.clients-slides.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+}
+
+.clients-slides-two.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  background-color: var(--white-color);
+  -webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50%;
+}
+
+.clients-slides-two.owl-theme .owl-dots .owl-dot:hover span, .clients-slides-two.owl-theme .owl-dots .owl-dot.active span {
+  background-color: var(--optional-color);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.clients-slides-two.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+}
+
+.price-plans-tab .react-tabs .react-tabs__tab-list {
+  border-bottom: none;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.price-plans-tab .react-tabs .react-tabs__tab-list .react-tabs__tab {
+  border: none !important;
+  border-bottom: none;
+  background-color: var(--main-color);
+  bottom: 0;
+  padding: 8px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--white-color);
+}
+
+.price-plans-tab .react-tabs .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected {
+  background: #36CC72;
+  color: var(--white-color);
+  border-radius: 30px;
+}
+
+.plans-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.plans-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.plans-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.plans-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.overview-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.overview-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.overview-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.about-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.about-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.about-shape-6 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.about-shape-7 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.fun-facts-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.fun-facts-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.projects-slides.owl-theme {
+  left: calc((100% - 1380px)/2);
+  position: relative;
+}
+
+.projects-slides.owl-theme .owl-nav {
+  text-align: left;
+  margin-top: 25px;
+}
+
+.projects-slides.owl-theme .owl-nav .owl-prev, .projects-slides.owl-theme .owl-nav .owl-next {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 32px;
+  margin: 0 10px 0 0;
+}
+
+.projects-slides.owl-theme .owl-nav .owl-prev:hover, .projects-slides.owl-theme .owl-nav .owl-next:hover {
+  background-color: var(--optional-color);
+  color: var(--white-color);
+}
+
+.projects-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.projects-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.projects-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.analysis-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.analysis-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.analysis-shape-5 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.technology-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.technology-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.technology-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.technology-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.page-banner-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.page-banner-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.page-banner-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.faq-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.faq-accordion {
+  padding-left: 50px;
+}
+
+.faq-accordion .accordion {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.faq-accordion .accordion .accordion__item {
+  display: block;
+  margin-bottom: 0;
+  border: none;
+}
+
+.faq-accordion .accordion .accordion__item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .accordion .accordion__item:last-child .accordion__button {
+  border-bottom: 1px solid #D0D9E4;
+}
+
+.faq-accordion .accordion .accordion__item:last-child .accordion-content {
+  padding-bottom: 0;
+  border-top: none;
+}
+
+.faq-accordion .accordion .accordion__button {
+  padding: 15px 25px 15px 25px;
+  color: var(--black-color);
+  position: relative;
+  display: block;
+  font-size: var(--font-size);
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  border-top: 1px solid #D0D9E4;
+  border-left: 1px solid #D0D9E4;
+  border-right: 1px solid #D0D9E4;
+  background-color: transparent;
+}
+
+.faq-accordion .accordion .accordion__button:focus {
+  outline: 0;
+}
+
+.faq-accordion .accordion .accordion__button i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: var(--black-color);
+  font-size: 20px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.faq-accordion .accordion .accordion__button.active i::before {
+  content: "\f1ae";
+  color: var(--main-color);
+}
+
+.faq-accordion .accordion .accordion__panel {
+  position: relative;
+  padding: 18px 0 18px 0;
+  color: var(--paragraph-color);
+  border-top: 1px solid #D0D9E4;
+}
+
+.faq-accordion .accordion .accordion__panel p {
+  font-size: 15px;
+}
+
+.faq-accordion.accordion-box {
+  max-width: 950px;
+  margin: auto;
+  padding-left: 0;
+}
+
+.ticket-box {
+  max-width: 665px;
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.ticket-box h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.ticket-box .box-one {
+  background-color: var(--main-color);
+  padding: 30px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.ticket-box .box-one i {
+  display: block;
+  color: var(--white-color);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.ticket-box .box-one a {
+  color: var(--white-color);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+
+.ticket-box .box-two {
+  background-color: #36CC72;
+  padding: 30px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ticket-box .box-two i {
+  display: block;
+  color: var(--white-color);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.ticket-box .box-two a {
+  color: var(--white-color);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+
+.faq-shape-1 {
+  position: absolute;
+  left: 2%;
+  top: 20%;
+  -webkit-transform: translateY(-20%) translateX(-2%);
+          transform: translateY(-20%) translateX(-2%);
+  z-index: -1;
+}
+
+.faq-shape-2 {
+  position: absolute;
+  left: 25%;
+  top: 68%;
+  -webkit-transform: translateY(-68%) translateX(-25%);
+          transform: translateY(-68%) translateX(-25%);
+  z-index: -1;
+  max-width: 100px;
+}
+
+.faq-shape-3 {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  -webkit-transform: translateY(-10%) translateX(-5%);
+          transform: translateY(-10%) translateX(-5%);
+  z-index: -1;
+}
+
+.faq-shape-4 {
+  position: absolute;
+  right: 2%;
+  top: 30%;
+  -webkit-transform: translateY(-30%) translateX(-2%);
+          transform: translateY(-30%) translateX(-2%);
+  z-index: -1;
+}
+
+.faq-shape-5 {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  -webkit-transform: translateY(-30%) translateX(-5%);
+          transform: translateY(-30%) translateX(-5%);
+  z-index: -1;
+  max-width: 175px;
+}
+
+.services-details-overview-content .overview-image .shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.services-details-overview-content .overview-image .shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.pagination-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination-area .page-numbers {
+  width: 40px;
+  height: 40px;
+  background-color: #EAF0FF;
+  border: 1px solid #EAF0FF;
+  color: #79798D;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 40px;
+  position: relative;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+
+.pagination-area .page-numbers:hover, .pagination-area .page-numbers.current {
+  color: var(--main-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--main-color);
+}
+
+.pagination-area .page-numbers i {
+  position: relative;
+  top: 1.5px;
+}
+
+.footer-shape-1 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.footer-shape-2 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.footer-shape-3 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.footer-shape-4 img {
+  -webkit-animation-name: rotateme;
+          animation-name: rotateme;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+/*# sourceMappingURL=style.css.map */
