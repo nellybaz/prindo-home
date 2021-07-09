@@ -58,8 +58,8 @@ const PaymentForm = () => {
         },
       };
 
-      const authEmail = "nelson.bassey111@gmail.com";
-      const authPassword = "password123P";
+      const authEmail = process.env.EMAIL;
+      const authPassword = process.env.PASSWORD;
       const token = btoa(`${authEmail}:${authPassword}`);
 
       const options = {
