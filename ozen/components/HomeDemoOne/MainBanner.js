@@ -15,7 +15,7 @@ const MainBanner = () => {
                   animateOnce={true}
                 >
                   <h1>
-                    Create a Seamless BTC Payment System for your Business
+                    BTC payment on your apps directly into your central wallet
                   </h1>
                 </ScrollAnimation>
 
@@ -25,8 +25,7 @@ const MainBanner = () => {
                   animateOnce={true}
                 >
                   <p>
-                    Prindo Pay helps you to easily set up a Bitcoin transaction
-                    medium, to allow your customers pay with Bitcoin seamlessly.
+                    PrindoPay handles unique wallet generation each time and also handles the payment modal. All you do is receive your payments
                   </p>
                 </ScrollAnimation>
               </div>

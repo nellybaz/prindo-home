@@ -29,7 +29,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="price">
-                        $500 <span>/Month</span>
+                        $200 <span>/Month</span>
                       </div>
 
                       <div className="plans-btn">
@@ -69,7 +69,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="price">
-                        $600 <span>/Month</span>
+                        $500 <span>/Month</span>
                       </div>
 
                       <div className="plans-btn">
@@ -157,7 +157,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="price">
-                        $5999 <span>/Yearly</span>
+                        $2399 <span>/Yearly</span>
                       </div>
 
                       <div className="plans-btn">
@@ -197,7 +197,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="price">
-                        $7199 <span>/Yearly</span>
+                        $5999 <span>/Yearly</span>
                       </div>
 
                       <div className="plans-btn">
