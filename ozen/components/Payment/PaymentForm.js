@@ -19,8 +19,7 @@ const PaymentForm = () => {
   const handleChange = (event, key) => {
     if (key === "email") {
       setState({ ...state, email: event.target.value });
-    }
-    if (key === "password") {
+    } else if (key === "password") {
       setState({ ...state, password: event.target.value });
     } else {
       setState({ ...state, passwordConfirm: event.target.value });
@@ -30,9 +29,9 @@ const PaymentForm = () => {
   const getPaymentLink = async () => {
     try {
       const planPrice = {
-        1: 1,
+        1: 200,
         2: 500,
-        3: 800,
+        3: 1,
       };
       const storeId = "3Tn3gwxn6BqvG3bPd4bB62ucGCyhsDWyG9BJdTNwvhpW";
       const URL = `https://app.prindopay.com/api/v1/stores/${storeId}/invoices`;
@@ -60,6 +59,7 @@ const PaymentForm = () => {
 
       const authEmail = process.env.EMAIL;
       const authPassword = process.env.PASSWORD;
+
       const token = btoa(`${authEmail}:${authPassword}`);
 
       const options = {
@@ -83,8 +83,9 @@ const PaymentForm = () => {
       isAdministrator: false,
     };
 
-    const authEmail = "nelson.bassey111@gmail.com";
-    const authPassword = "password123P";
+    const authEmail = process.env.EMAIL;
+    const authPassword = process.env.PASSWORD;
+
     const token = btoa(`${authEmail}:${authPassword}`);
 
     const options = {
