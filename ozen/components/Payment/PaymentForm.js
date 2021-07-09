@@ -6,6 +6,7 @@ const PaymentForm = () => {
   const initialState = {
     email: "",
     password: "",
+    passwordConfirm: "",
   };
 
   const [state, setState] = useState(initialState);
@@ -18,19 +19,22 @@ const PaymentForm = () => {
   const handleChange = (event, key) => {
     if (key === "email") {
       setState({ ...state, email: event.target.value });
-    } else {
+    }
+    if (key === "password") {
       setState({ ...state, password: event.target.value });
+    } else {
+      setState({ ...state, passwordConfirm: event.target.value });
     }
   };
 
   const getPaymentLink = async () => {
     try {
       const planPrice = {
-        1: 200,
+        1: 1,
         2: 500,
         3: 800,
       };
-      const storeId = "GnUpL2g5THeXxbfiPEpBtd7QFcNw3we2DhXboAh7tZ28";
+      const storeId = "3Tn3gwxn6BqvG3bPd4bB62ucGCyhsDWyG9BJdTNwvhpW";
       const URL = `https://app.prindopay.com/api/v1/stores/${storeId}/invoices`;
 
       const index = parseInt(query.planIndex);
@@ -99,6 +103,11 @@ const PaymentForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (state.password !== state.passwordConfirm) {
+      setMessage("Passwords do not match");
+      return;
+    }
     setMessage("");
     setIsLoading(true);
     try {
@@ -158,7 +167,9 @@ const PaymentForm = () => {
                     required
                     className="form-control"
                     placeholder="Confirm Password*"
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      handleChange(e, "passwordConfirm");
+                    }}
                   />
                 </div>
 
