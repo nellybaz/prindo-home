@@ -31,7 +31,7 @@ const PaymentForm = () => {
       const planPrice = {
         1: 200,
         2: 500,
-        3: 1,
+        3: 800,
       };
       const storeId = "3Tn3gwxn6BqvG3bPd4bB62ucGCyhsDWyG9BJdTNwvhpW";
       const URL = `https://app.prindopay.com/api/v1/stores/${storeId}/invoices`;
