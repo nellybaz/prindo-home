@@ -14,11 +14,11 @@ const Footer = () => {
                                 <div className="widget-logo">
                                     <Link href="/">
                                         <a>
-                                            <img src="/images/logo.png" alt="image" />
+                                           <h3>Prindo</h3>
                                         </a>
                                     </Link>
                                 </div>
-                                <p>Best solution for your it startup business consecteturadipiscing elit. Scelerisque amet odio velit  auctor. nam elit nulla.</p>
+                                <p>Prindo - Receive payments with BTC</p>
 
                                 <ul className="widget-info">
                                     <li>
@@ -28,7 +28,7 @@ const Footer = () => {
 
                                     <li>
                                         <i className="ri-global-line"></i>
-                                        <a href="mailto:hello.me@ozen.com">hello.me@ozen.com</a>
+                                        <a href="mailto:hello@prindopay.com">hello@prindopay.com</a>
                                     </li>
 
                                     <li>
@@ -39,7 +39,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-2 col-sm-6 col-md-3">
+                        {/* <div className="col-lg-2 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
                                 <h3>Quick Link</h3>
 
@@ -169,7 +169,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="col-lg-3 col-sm-12 col-md-6">
                             <div className="single-footer-widget">
@@ -220,7 +220,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="copyright-area-content">
                             <p>
-                                Copyright © {currentYear} Ozen. All Rights Reserved by <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                                Copyright © {currentYear} Prindo. All Rights Reserved
                             </p>
                         </div>
                     </div>

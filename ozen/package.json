@@ -1,7 +1,7 @@
 {
     "name": "ozen",
     "version": "1.0.0",
-    "description": "React Next.js Technology & IT Startups Template",
+    "description": "Prindo - Receive payments with BTC",
     "main": "index.js",
     "scripts": {
         "dev": "next dev",

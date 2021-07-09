@@ -81,7 +81,7 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#">
+                    <Link href="#prindo-services">
                       <a
                         onClick={(e) => e.preventDefault()}
                         className="nav-link"

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Services = () => {
   return (
     <>
-      <div className="services-area pt-100 pb-70">
+      <div id="prindo-services" className="services-area pt-100 pb-70">
         <div className="container">
           <div className="section-title">
             <h2>Our Services</h2>
