@@ -33,7 +33,7 @@ const PaymentForm = () => {
         2: 500,
         3: 800,
       };
-      const storeId = "3Tn3gwxn6BqvG3bPd4bB62ucGCyhsDWyG9BJdTNwvhpW";
+      const storeId = "C6fMGapBRZJdu7rRUTk5dSqv4NaZ14Y9F8oBQCQyoFHh";
       const URL = `https://app.prindopay.com/api/v1/stores/${storeId}/invoices`;
 
       const index = parseInt(query.planIndex);
