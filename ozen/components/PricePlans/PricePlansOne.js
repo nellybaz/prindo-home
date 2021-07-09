@@ -33,7 +33,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=1" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>
@@ -73,7 +73,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=2" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>
@@ -117,7 +117,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=3" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>
@@ -161,7 +161,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=1" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>
@@ -201,7 +201,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=2" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>
@@ -245,7 +245,7 @@ const PricePlansOne = () => {
                       </div>
 
                       <div className="plans-btn">
-                        <a href="/payment" className="default-btn">
+                        <a href="/payment?planIndex=3" className="default-btn">
                           Purchase Now
                           <i className="ri-arrow-right-line"></i>
                           <span></span>

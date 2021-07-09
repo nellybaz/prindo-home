@@ -1,29 +1,116 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const PaymentForm = () => {
-  const state = {
-    name: "",
+  const initialState = {
+    email: "",
+    password: "",
   };
 
-  const handleChange = (event) => {
-    setState({ name: event.target.value });
+  const [state, setState] = useState(initialState);
+
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { query } = useRouter();
+
+  const handleChange = (event, key) => {
+    if (key === "email") {
+      setState({ ...state, email: event.target.value });
+    } else {
+      setState({ ...state, password: event.target.value });
+    }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const user = {
-      name: state.name,
+  const getPaymentLink = async () => {
+    try {
+      const planPrice = {
+        1: 200,
+        2: 500,
+        3: 800,
+      };
+      const storeId = "GnUpL2g5THeXxbfiPEpBtd7QFcNw3we2DhXboAh7tZ28";
+      const URL = `https://app.prindopay.com/api/v1/stores/${storeId}/invoices`;
+
+      const index = parseInt(query.planIndex);
+      const amount = planPrice[index].toString();
+
+      const payload = {
+        amount,
+        currency: "USD",
+        metadata: {
+          orderId: state.email,
+        },
+        checkout: {
+          speedPolicy: "HighSpeed",
+          paymentMethods: ["BTC"],
+          expirationMinutes: 15,
+          monitoringMinutes: 90,
+          paymentTolerance: 0,
+          redirectURL: "https://app.prindopay.com/login?ReturnUrl=%2F",
+          redirectAutomatically: true,
+          defaultLanguage: "en",
+        },
+      };
+
+      const authEmail = "nelson.bassey111@gmail.com";
+      const authPassword = "password123P";
+      const token = btoa(`${authEmail}:${authPassword}`);
+
+      const options = {
+        headers: {
+          Authorization: `Basic ${token}`,
+        },
+      };
+
+      const response = await axios.post(URL, payload, options);
+      return response.data["checkoutLink"];
+    } catch (error) {
+      throw new Error("error getting payment link");
+    }
+  };
+
+  const createPrindoUser = async () => {
+    const URL = `https://app.prindopay.com/api/v1/users`;
+    const payload = {
+      email: state.email,
+      password: state.password,
+      isAdministrator: false,
     };
-    axios
-      .post("https://us-central1-prindo-36fd5.cloudfunctions.net/addUser", {
-        user,
-      })
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-        window.location = "";
-      });
+
+    const authEmail = "nelson.bassey111@gmail.com";
+    const authPassword = "password123P";
+    const token = btoa(`${authEmail}:${authPassword}`);
+
+    const options = {
+      headers: {
+        Authorization: `Basic ${token}`,
+      },
+    };
+    try {
+      await axios.post(URL, payload, options);
+      return true;
+    } catch (error) {
+      console.log(error);
+      throw new Error("error creating user");
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setMessage("");
+    setIsLoading(true);
+    try {
+      const userIsCreated = await createPrindoUser();
+      if (userIsCreated) {
+        const link = await getPaymentLink();
+        window.location.href = link;
+      }
+    } catch (error) {
+      setMessage(error.message);
+      setIsLoading(false);
+    }
   };
   return (
     <>
@@ -32,6 +119,9 @@ const PaymentForm = () => {
           <div className="contact-form">
             <h3>Create your Account</h3>
 
+            <small style={{ color: "red" }}>{message}</small>
+            <br />
+            <br />
             <form id="contactForm">
               <div className="row">
                 <div className="form-group">
@@ -42,7 +132,9 @@ const PaymentForm = () => {
                     className="form-control"
                     required
                     placeholder="Email*"
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      handleChange(e, "email");
+                    }}
                   />
                 </div>
                 <div className="form-group">
@@ -53,7 +145,9 @@ const PaymentForm = () => {
                     required
                     className="form-control"
                     placeholder="Password*"
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      handleChange(e, "password");
+                    }}
                   />
                 </div>
                 <div className="form-group">
@@ -70,11 +164,12 @@ const PaymentForm = () => {
 
                 <div className="col-lg-12 col-md-12">
                   <button
+                    disabled={isLoading}
                     type="submit"
                     className="default-btn"
                     onClick={handleSubmit}
                   >
-                    Continue
+                    {isLoading ? "Loading.." : "Continue"}
                     <i className="ri-arrow-right-line"></i>
                     <span></span>
                   </button>
