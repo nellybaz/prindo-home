@@ -1,0 +1,1211 @@
+/*
+@File: Ozen Template Global Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+** - Default CSS
+** - Default btn CSS
+** - Section Title CSS
+** - Main Banner Shape
+** - Partner Area CSS
+** - Features Area CSS
+** - Experiences Area CSS
+** - Services Area CSS
+** - Support Area CSS
+** - Cases Area CSS
+** - Clients Area CSS
+** - Plans Area CSS
+** - Overview Area CSS
+** - About Area CSS
+** - Fun Facts Area CSS
+** - Projects Area CSS
+** - Analysis Area CSS 
+** - Technology Area CSS 
+** - Page Banner Area CSS 
+** - FAQ Area CSS 
+** - Services Details Area CSS
+** - Pagination CSS
+** - Footer Area CSS
+*/
+
+// Default CSS 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  
+:root {
+    // Font Family
+    --main-font-family: 'Inter', sans-serif;
+
+    // Primary Color
+    --main-color: #0064FB;
+
+    // Optional Color
+    --optional-color: #FF414B;
+    
+    // Gradient Color
+    --main-gradient-color: linear-gradient(90deg, rgba(255, 65, 76, 0.96) 0%, #FF8760 100%);
+    
+    --white-color: #ffffff;
+    --black-color: #2E2F46;
+    --paragraph-color: #494A60;
+    --font-size: 16px;
+    --transition: .6s;
+
+    scroll-behavior: initial;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font-family);
+    font-size: var(--font-size);
+    color: var(--paragraph-color);
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--black-color);
+    display: inline-block;
+
+    &:hover, &:focus {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+}
+button {
+    outline: 0 !important;
+}
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: var(--paragraph-color);
+    font-weight: 400;
+    font-size: var(--font-size);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+i {
+    line-height: normal;
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+.p-relative {
+    position: relative;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; 
+}
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.pb-70 {
+    padding-bottom: 70px;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+.pr-15 {
+    padding-right: 15px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: var(--black-color);
+    font-family: var(--main-font-family);
+    font-weight: 600;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.form-select {
+    height: 45px;
+    font-size: 14px;
+}
+
+// Default Btn CSS
+.default-btn {
+    border: none;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    transition: var(--transition);
+    border-radius: 5px;
+    padding: 15px 50px 15px 25px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: -5px;
+    
+    span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: var(--optional-color);
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 5px;
+    }
+    i {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+    }
+    &:hover {
+        color: var(--white-color);
+        transform: translateY(-2px);
+
+        span {
+            width: 225%;
+            height: 562.5px;
+        }
+    }
+}
+
+// Section Title CSS
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        max-width: 750px;
+        margin: auto;
+    }
+}
+
+// Main Banner Shape
+.main-banner-shape-1 {
+    animation: moveleftbounce 5s linear infinite;
+}
+.main-banner-shape-2 {
+    animation: moveleftbounce 5s linear infinite;
+}
+.main-banner-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.main-banner-shape-4 {
+    animation: animationFramesOne 10s infinite linear;
+}
+.main-banner-shape-5 {
+    animation: moveleftbounce 5s linear infinite;
+}
+.main-banner-shape-6 {
+    animation: moveleftbounce 5s linear infinite;
+}
+.main-banner-shape-7 {
+    animation: moveleftbounce 5s linear infinite;
+}
+.main-banner-shape-8 {
+    animation: moveleftbounce 5s linear infinite;
+}
+
+@keyframes rotateme {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animationFramesOne {
+    0% {
+        transform: translate(0px,0px) rotate(0deg) ;
+    }
+    20% {
+        transform: translate(73px,-1px) rotate(36deg) ;
+    }
+    40% {
+        transform: translate(141px,72px) rotate(72deg) ;
+    }
+    60% {
+        transform: translate(83px,122px) rotate(108deg) ;
+    }
+    80% {
+        transform: translate(-40px,72px) rotate(144deg) ;
+    }
+    100% {
+        transform:  translate(0px,0px) rotate(0deg) ;
+    }
+}
+
+@keyframes moveleftbounce {
+    0% {
+        transform: translateX(0px); 
+    }
+    50% {
+        transform: translateX(20px); 
+    }
+    100% {
+        transform: translateX(0px); 
+    } 
+}
+
+// Partner Area CSS
+.partner-slides {
+    &.owl-theme {
+        .owl-nav {
+            margin-top: 0;
+            
+            [class*=owl-] {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0;
+                outline: 0;
+                width: 35px;
+                height: 35px;
+                line-height: 43px;
+                transition: var(--transition);
+                background-color: var(--white-color);
+                box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+                color: var(--black-color);
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                padding: 0;
+
+                &:hover, &:focus {
+                    background-color: var(--main-color);
+                    color: var(--white-color);
+                }
+                &.owl-next {
+                    left: auto;
+                    right: 0;
+                }
+                i {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+        &:hover {
+            .owl-nav {
+                [class*=owl-] {
+                    opacity: 1;
+                    visibility: visible;
+                    left: -20px;
+                    transition: var(--transition);
+    
+                    &.owl-next {
+                        left: auto;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Features Area CSS
+.single-features {
+    img {
+        transition: var(--transition);
+    }
+
+    &:hover {
+        img {
+            animation: bounceIn 1s;
+        }
+    }
+}
+.single-features-box {
+    &:hover {
+        &::before {
+            height: 100%;
+        }
+        img {
+            animation: bounceIn 1s;
+        }
+    }
+}
+.features-shape-1 {
+    animation: rotateme 8s infinite linear;
+}
+.features-shape-2 {
+    animation: rotateme 8s infinite linear;
+}
+.features-shape-3 {
+    animation: animationFramesOne 8s infinite linear;
+}
+.features-shape-4 {
+    animation: animationFramesOne 20s infinite linear;
+}
+
+// Experiences Area CSS
+.experiences-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.experiences-shape-3 {
+    animation: animationFramesOne 10s infinite linear;
+}
+.experiences-shape-4 {
+    animation: animationFramesOne 20s infinite linear;
+}
+.experiences-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Services Area CSS
+.single-services {
+    &:hover {
+        .icon {
+            i {
+                animation: jackInTheBox 0.5s;
+            }
+        }
+    }
+    &.with-box-shadow {
+        &:hover {
+            .icon {
+                i {
+                    animation: jackInTheBox 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.single-services-item {
+    &:hover {
+        .icon {
+            i {
+                animation: jackInTheBox 0.5s;
+            }
+        }
+    }
+}
+.single-services-box {
+    &:hover {
+        .icon {
+            i {
+                animation: jackInTheBox 0.5s;
+            }
+        }
+    }
+}
+.services-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.services-shape-2 {
+    animation: animationFramesOne 10s infinite linear;
+}
+
+// Support Area CSS
+.support-shape-3 {
+    animation: animationFramesOne 10s infinite linear;
+}
+.support-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Cases Area CSS
+.cases-shape-4 {
+    animation: animationFramesOne 10s infinite linear;
+}
+.cases-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 10s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.cases-shape-6 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.cases-shape-7 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 10s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Clients Area CSS
+.clients-area {
+    &.bg-white-color {
+        .clients-slides {
+            &.owl-theme {
+                .owl-dots {
+                    .owl-dot {
+                        span {
+                            background-color: #E5F0FF;
+                        }
+                        &:hover, &.active {
+                            span {
+                                background-color: var(--main-color);
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clients-item {
+    .shape-1 { 
+        img {
+            animation: {
+                name: rotateme;
+                duration: 10s;
+                iteration-count: infinite;
+                timing-function: linear;
+            };
+        }
+    }
+    .shape-2 {
+        img {
+            animation: {
+                name: rotateme;
+                duration: 10s;
+                iteration-count: infinite;
+                timing-function: linear;
+            };
+        }
+    }
+    .shape-3 {
+        img {
+            animation: {
+                name: rotateme;
+                duration: 10s;
+                iteration-count: infinite;
+                timing-function: linear;
+            };
+        }
+    }
+}
+.clients-slides {
+    &.owl-theme {
+        .owl-dots {
+            .owl-dot {
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: var(--white-color);
+                    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+                    transition: var(--transition);
+                    border-radius: 50%;
+                }
+                &:hover, &.active {
+                    span {
+                        background-color: var(--main-color);
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 30px;
+        }
+    }
+}
+.clients-slides-two {
+    &.owl-theme {
+        .owl-dots {
+            .owl-dot {
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: var(--white-color);
+                    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+                    transition: var(--transition);
+                    border-radius: 50%;
+                }
+                &:hover, &.active {
+                    span {
+                        background-color: var(--optional-color);
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 30px;
+        }
+    }
+}
+
+// Plans Area CSS
+.price-plans-tab {
+    .react-tabs {
+        .react-tabs__tab-list {
+            border-bottom: none;
+            margin: 0 0 30px;
+            text-align: center;
+
+            .react-tabs__tab {
+                border: none !important;
+                border-bottom: none;
+                background-color: var(--main-color);
+                bottom: 0;
+                padding: 8px 25px;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0 5px;
+                transition: var(--transition);
+                color: var(--white-color);
+
+                &.react-tabs__tab--selected {
+                    background: #36CC72;
+                    color: var(--white-color);
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+.plans-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.plans-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.plans-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.plans-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Overview Area CSS
+.overview-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.overview-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.overview-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+} 
+
+// About Area CSS
+.about-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.about-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.about-shape-6 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.about-shape-7 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}  
+
+// Fun Facts Area CSS
+.fun-facts-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.fun-facts-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Projects Area CSS
+.projects-slides {
+    &.owl-theme {
+        left: calc((100% - 1380px)/2);
+        position: relative;
+
+        .owl-nav {
+            text-align: left;
+            margin-top: 25px;
+            .owl-prev, .owl-next {
+                background-color: var(--main-color);
+                color: var(--white-color);
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 32px;
+                margin: 0 10px 0 0;
+
+                &:hover {
+                    background-color: var(--optional-color);
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+} 
+.projects-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+} 
+.projects-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.projects-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Analysis Area CSS 
+.analysis-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.analysis-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.analysis-shape-5 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+
+// Technology Area CSS 
+.technology-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.technology-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.technology-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.technology-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+ 
+// Page Banner Area CSS 
+.page-banner-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.page-banner-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.page-banner-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 5s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+} 
+
+// FAQ Area CSS 
+.faq-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.faq-accordion {
+    padding-left: 50px;
+
+    .accordion {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        border: none;
+
+        .accordion__item {
+            display: block;
+            margin-bottom: 0;
+            border: none;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                .accordion__button {
+                    border-bottom: 1px solid #D0D9E4;
+                }
+                .accordion-content {
+                    padding-bottom: 0;
+                    border-top: none;
+                }
+            }
+        }
+        .accordion__button {
+            padding: 15px 25px 15px 25px;
+            color: var(--black-color);
+            position: relative;
+            display: block;
+            font-size: var(--font-size);
+            font-weight: 500;
+            border-radius: 2px;
+            cursor: pointer;
+            border-top: 1px solid #D0D9E4;
+            border-left: 1px solid #D0D9E4;
+            border-right: 1px solid #D0D9E4;
+            background-color: transparent;
+
+            &:focus {
+                outline: 0;
+            }
+            
+            i {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--black-color);
+                font-size: 20px;
+                transition: var(--transition);
+            }
+            &.active {
+                i {
+                    &::before {
+                        content: "\f1ae";
+                        color: var(--main-color);
+                    }
+                }
+            }
+        }
+        .accordion__panel {
+            position: relative;
+            padding: 18px 0 18px 0;
+            color: var(--paragraph-color);
+            border-top: 1px solid #D0D9E4;
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    &.accordion-box {
+        max-width: 950px;
+        margin: auto;
+        padding-left: 0;
+    }
+}
+.ticket-box {
+    max-width: 665px;
+    margin: 100px auto 0;
+    text-align: center;
+
+    h3 {
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 35px;
+    }
+    .box-one {
+        background-color: var(--main-color);
+        padding: 30px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 25px;
+
+        i {
+            display: block;
+            color: var(--white-color);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: var(--white-color);
+            font-size: var(--font-size);
+            font-weight: 500;
+        }
+    }
+    .box-two {
+        background-color: #36CC72;
+        padding: 30px;
+        border-radius: 5px;
+        display: inline-block;
+
+        i {
+            display: block;
+            color: var(--white-color);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: var(--white-color);
+            font-size: var(--font-size);
+            font-weight: 500;
+        }
+    }
+}
+.faq-shape-1 {
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    transform: translateY(-20%) translateX(-2%);
+    z-index: -1;
+}
+.faq-shape-2 {
+    position: absolute;
+    left: 25%;
+    top: 68%;
+    transform: translateY(-68%) translateX(-25%);
+    z-index: -1;
+    max-width: 100px;
+}
+.faq-shape-3 {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    transform: translateY(-10%) translateX(-5%);
+    z-index: -1;
+}
+.faq-shape-4 {
+    position: absolute;
+    right: 2%;
+    top: 30%;
+    transform: translateY(-30%) translateX(-2%);
+    z-index: -1;
+}
+.faq-shape-5 {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    transform: translateY(-30%) translateX(-5%);
+    z-index: -1;
+    max-width: 175px;
+}
+ 
+//  Services Details Area CSS 
+.services-details-overview-content {
+    .overview-image {
+        .shape-1 {
+            img {
+                animation: {
+                    name: rotateme;
+                    duration: 5s;
+                    iteration-count: infinite;
+                    timing-function: linear;
+                };
+            }
+        }
+        .shape-2 {
+            img {
+                animation: {
+                    name: rotateme;
+                    duration: 5s;
+                    iteration-count: infinite;
+                    timing-function: linear;
+                };
+            }
+        }
+    }
+}
+
+// Pagination CSS
+.pagination-area {
+    margin-top: 20px;
+    text-align: center;
+
+    .page-numbers {
+        width: 40px;
+        height: 40px;
+        background-color: #EAF0FF;
+        border: 1px solid #EAF0FF;
+        color: #79798D;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        line-height: 40px;
+        position: relative;
+        margin-left: 2px;
+        margin-right: 2px;
+        font-size: var(--font-size);
+        font-weight: 500;
+        
+        &:hover, &.current {
+            color: var(--main-color);
+            background-color: var(--white-color);
+            border: 1px solid var(--main-color);
+        }
+        i {
+            position: relative;
+            top: 1.5px;
+        }
+    }
+}
+
+// Footer Area CSS
+.footer-shape-1 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 15s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.footer-shape-2 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 15s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.footer-shape-3 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 15s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}
+.footer-shape-4 {
+    img {
+        animation: {
+            name: rotateme;
+            duration: 15s;
+            iteration-count: infinite;
+            timing-function: linear;
+        };
+    }
+}

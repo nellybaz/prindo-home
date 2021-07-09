@@ -1,0 +1,217 @@
+// Ozen Template Global Responsive Styles
+
+@media only screen and (max-width: 767px) {
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+    .pb-70 {
+        padding-bottom: 20px;
+    }
+    .section-title {
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .pl-15 {
+        padding-left: 0;
+    }
+
+    // Popup modal video
+    .modal-video-inner {
+        padding: 0 15px;
+        .modal-video-close-btn {
+            right: 0;
+        }
+    } 
+
+    // faq-accordion
+    .faq-accordion {
+        padding-left: 0;
+        margin-top: 35px;
+        .accordion {
+            .accordion__button {
+                padding: 10px 15px;
+            }
+        }
+    }
+    .faq-image {
+        text-align: center;
+    }
+      
+    .faq-shape-1 {
+        display: none;
+    }
+    .faq-shape-2 {
+        display: none;
+    }
+    .faq-shape-3 {
+        display: none;
+    }
+    .faq-shape-4 {
+        display: none;
+    }
+    .faq-shape-5 {
+        display: none;
+    }
+     
+    .pagination-area {
+        margin-top: 0;
+    }
+
+    .projects-slides {
+        &.owl-theme {
+            left: 0;
+
+            .owl-nav {
+                text-align: center;
+            }
+        }
+    }
+}
+  
+@media only screen and (min-width: 768px) and (max-width: 991px) {  
+    .ptb-100 {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .pt-100 {
+        padding-top: 70px;
+    }
+    .pb-100 {
+        padding-bottom: 70px;
+    }
+    .pb-70 {
+        padding-bottom: 40px;
+    }
+    .pl-15 {
+        padding-left: 0;
+    }
+    
+    .projects-area {
+        .container-fluid {
+            max-width: 720px;
+        }
+    }
+    .projects-slides {
+        &.owl-theme {
+            left: 0;
+
+            .owl-nav {
+                text-align: center;
+            }
+        }
+    }
+ 
+    .faq-accordion {
+        padding-left: 0;
+        margin-top: 35px;
+    }
+    .faq-image {
+        text-align: center;
+    }
+  
+    .faq-shape-1 {
+        display: none;
+    }
+    .faq-shape-2 {
+        display: none;
+    }
+    .faq-shape-3 {
+        display: none;
+    }
+    .faq-shape-4 {
+        display: none;
+    }
+    .faq-shape-5 {
+        display: none;
+    }
+
+    .pagination-area {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .pl-15 {
+        padding-left: 0;
+    }
+    .faq-shape-1 {
+        display: none;
+    }
+    .faq-shape-2 {
+        display: none;
+    }
+    .faq-shape-3 {
+        display: none;
+    }
+    .faq-shape-4 {
+        display: none;
+    }
+    .faq-shape-5 {
+        display: none;
+    }
+    
+    .projects-area {
+        .container-fluid {
+            max-width: 960px;
+        }
+    }
+    .projects-slides {
+        &.owl-theme {
+            left: 0;
+
+            .owl-nav {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .projects-slides {
+        &.owl-theme {
+            left: 0;
+
+            .owl-nav {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) { 
+    .main-navbar {
+        .navbar {
+            .navbar-nav {
+                &::-webkit-scrollbar {
+                    width: 10px;
+                } 
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1; 
+                } 
+                &::-webkit-scrollbar-thumb {
+                    background: var(--main-color);
+                } 
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555; 
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .container {
+        max-width: 1410px;
+    }
+}

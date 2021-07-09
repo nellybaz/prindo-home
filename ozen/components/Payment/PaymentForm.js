@@ -2,18 +2,18 @@ import React from "react";
 import axios from "axios";
 
 const PaymentForm = () => {
-  state = {
+  const state = {
     name: "",
   };
 
-  handleChange = (event) => {
-    this.setState({ name: event.target.value });
+  const handleChange = (event) => {
+    setState({ name: event.target.value });
   };
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const user = {
-      name: this.state.name,
+      name: state.name,
     };
     axios
       .post("https://us-central1-prindo-36fd5.cloudfunctions.net/addUser", {
@@ -42,7 +42,7 @@ const PaymentForm = () => {
                     className="form-control"
                     required
                     placeholder="Email*"
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="form-group">
@@ -53,7 +53,7 @@ const PaymentForm = () => {
                     required
                     className="form-control"
                     placeholder="Password*"
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="form-group">
@@ -64,7 +64,7 @@ const PaymentForm = () => {
                     required
                     className="form-control"
                     placeholder="Confirm Password*"
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -72,7 +72,7 @@ const PaymentForm = () => {
                   <button
                     type="submit"
                     className="default-btn"
-                    onClick={this.handleSubmit}
+                    onClick={handleSubmit}
                   >
                     Continue
                     <i className="ri-arrow-right-line"></i>
