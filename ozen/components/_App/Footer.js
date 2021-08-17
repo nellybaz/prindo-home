@@ -23,7 +23,7 @@ const Footer = () => {
                                 <ul className="widget-info">
                                     <li>
                                         <i className="ri-customer-service-line"></i>
-                                        <a href="tel:3128959800">(312) 895-9800</a>
+                                        <a href="tel:+27724300496">+27 72 430 0496</a>
                                     </li>
 
                                     <li>
@@ -33,7 +33,7 @@ const Footer = () => {
 
                                     <li>
                                         <i className="ri-map-pin-line"></i>
-                                        121 St, Melbourne VIC 3000, Australia
+                                        28 Saint Georges Mall, Cape Town 8000, South Africa
                                     </li>
                                 </ul>
                             </div>
@@ -177,7 +177,7 @@ const Footer = () => {
 
                                 <div className="widget-newsletter">
                                     <div className="newsletter-content">
-                                        <p>Best solution for your it startup business consectetur adipiscing elit.</p>
+                                        <p>We help you focus on your customers while we handle the hurdles of BTC payments.</p>
                                     </div>   
 
                                     <form className="newsletter-form">
