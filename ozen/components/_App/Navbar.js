@@ -8,6 +8,10 @@ const Navbar = () => {
     setMenu(!menu);
   };
 
+  const scrollTo=(position)=>{
+    window.scrollTo(position.x, position.y);
+  }
+
   React.useEffect(() => {
     let elementId = document.getElementById("navbar");
     document.addEventListener("scroll", () => {
@@ -71,19 +75,25 @@ const Navbar = () => {
                 <ul className="navbar-nav m-auto">
                   <li className="nav-item">
                     <Link href="#" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Home
-                      </a>
+                    <a
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo({ x: 0, y: 0 });
+                      }}
+                      className="nav-link"
+                    >
+                      Home
+                    </a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="#prindo-services">
                       <a
-                        onClick={(e) => e.preventDefault()}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollTo({x:10, y:620})
+                        }}
                         className="nav-link"
                       >
                         Services
@@ -93,15 +103,29 @@ const Navbar = () => {
 
                   <li className="nav-item">
                     <Link href="#">
-                      <a className="nav-link">Pricing</a>
+                    <a
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo({ x: 10, y: 1420 });
+                      }}
+                      className="nav-link"
+                    >
+                      Pricing
+                    </a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="#" activeClassName="active">
-                      <a onClick={toggleNavbar} className="nav-link">
-                        Contact
-                      </a>
+                    <a
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo({ x: 10, y: 2220 });
+                      }}
+                      className="nav-link"
+                    >
+                      Contact
+                    </a>
                     </Link>
                   </li>
                 </ul>
