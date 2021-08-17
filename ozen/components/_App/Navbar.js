@@ -47,7 +47,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light">
               <Link href="/">
                 <a className="navbar-brand">
-                  <h3>Prindo</h3>
+                  <h3>PrindoPay</h3>
                   {/* <img src="/images/logo.png" alt="logo" /> */}
                 </a>
               </Link>

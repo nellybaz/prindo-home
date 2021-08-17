@@ -14,11 +14,11 @@ const Footer = () => {
                                 <div className="widget-logo">
                                     <Link href="/">
                                         <a>
-                                           <h3>Prindo</h3>
+                                           <h3>PrindoPay</h3>
                                         </a>
                                     </Link>
                                 </div>
-                                <p>Prindo - Receive payments with BTC</p>
+                                <p>PrindoPay - Receive payments with BTC</p>
 
                                 <ul className="widget-info">
                                     <li>
@@ -220,7 +220,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="copyright-area-content">
                             <p>
-                                Copyright © {currentYear} Prindo. All Rights Reserved
+                                Copyright © {currentYear} PrindoPay. All Rights Reserved
                             </p>
                         </div>
                     </div>
